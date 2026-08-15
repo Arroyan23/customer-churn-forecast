@@ -26,10 +26,20 @@ COLOR_CHURN = "#E76F51"
 COLOR_MED = "#E9C46A"
 
 st.set_page_config(
-    page_title="Churn Radar — Prediksi Churn Pelanggan",
+    page_title="Customer Churn Radar - Oyeng",
     page_icon="📉",
     layout="wide",
     initial_sidebar_state="expanded",
+)
+
+st.markdown(
+    """
+    <head>
+        <meta name="description" content="Alat bantu prediksi risiko pelanggan berhenti berlangganan (churn) berbasis machine learning.">
+        <meta property="og:description" content="Alat bantu prediksi risiko pelanggan berhenti berlangganan (churn) berbasis machine learning.">
+    </head>
+    """,
+    unsafe_allow_html=True
 )
 
 st.markdown(
