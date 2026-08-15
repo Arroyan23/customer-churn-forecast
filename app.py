@@ -201,14 +201,25 @@ with st.sidebar:
     )
     st.divider()
     st.metric("Akurasi model (holdout 20%)", f"{model_bundle['accuracy'] * 100:.1f}%")
-    st.metric("Jumlah data latih", f"{model_bundle['n_rows']:,}".replace(",", "."))
+    st.metric("Jumlah data train", f"{model_bundle['n_rows']:,}".replace(",", "."))
     st.caption("Model: XGBoost Classifier · Preprocessing: One-Hot Encoding + Imputer")
     st.divider()
     st.caption(
-        "Dibuat dari `model.ipynb` & `data-viz.ipynb` — proyek "
+        "Dibuat oleh Ahmad Syawqi Arroyan A.K.A Oyeng"
         "[customer-churn-forecast](https://github.com/Arroyan23/customer-churn-forecast)."
     )
-
+    st.markdown(
+    """
+    <style>
+    /* Mengubah warna teks dan nilai st.metric di sidebar */
+    [data-testid="stSidebar"] [data-testid="stMetricValue"],
+    [data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+        color: #1e1e1e !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # =========================================================================
 # HERO HEADER
